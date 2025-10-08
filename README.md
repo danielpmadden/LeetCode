@@ -9,6 +9,7 @@ This repository demonstrates **transparent problem-solving**, **structured docum
 ## Purpose
 
 This project serves as both a **portfolio** and a **learning ontology** — a structured, evolving map of algorithmic reasoning.  
+
 It shows how **AI tools and human engineers can collaborate responsibly**, producing explainable, reproducible, and efficient code while maintaining **semantic consistency and conceptual traceability**.  
 
 Each entry functions as a *node in a reasoning ontology*:  
