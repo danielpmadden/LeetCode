@@ -2,7 +2,7 @@
 
 A structured collection of my **LeetCode problem solutions,** each with a clean explanation, accepted submission details, and downloadable problem PDFs.
 
-This repository is designed to showcase clear reasoning, efficient data structures, and production-quality code made by with a custom GPT of my own design. 
+This repository is designed to showcase clear reasoning, efficient data structures, and production-quality code.
 
 ---
 
