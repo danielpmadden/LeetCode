@@ -1,115 +1,83 @@
-# LeetCode Solutions (AI-Assisted, Human-Verified & Ontologically Structured)
+# LeetCode Solutions Repository
 
-A curated collection of **AI-assisted algorithmic problem solutions**, each **human-reviewed, verified, and documented** for correctness, efficiency, and reasoning clarity.  
+Author: Daniel Madden
 
-This repository demonstrates **transparent problem-solving**, **structured documentation**, and a **governed approach to AI-augmented development** — blending automation with disciplined human oversight and **ontological organization**.
+## Overview
+This repository captures a curated set of LeetCode exercises with accompanying explanations and supporting artifacts. The focus is on long-term maintainability, repeatability, and transparent reasoning so that each solution can be audited, tested, and evolved without guessing about original intent.
 
----
-
-## Purpose
-
-This project serves as both a **portfolio** and a **learning ontology** — a structured, evolving map of algorithmic reasoning.  
-
-It shows how **AI tools and human engineers can collaborate responsibly**, producing explainable, reproducible, and efficient code while maintaining **semantic consistency and conceptual traceability**.  
-
-Each entry functions as a *node in a reasoning ontology*:  
-a documented instance of how a specific problem type, data structure, or design pattern is understood, solved, and explained.
-
----
+## Key Features
+- Verified Python implementations for selected LeetCode problems
+- Human-readable explanations documenting the underlying reasoning
+- Source assets (such as accepted-submission PDFs) retained for traceability
+- Modern Python packaging metadata for reproducible installation and reuse
+- Continuous integration workflow prepared for linting and security auditing
 
 ## Repository Structure
+```
+LeetCode
+├── src/                        → Installable Python package (`leetcode_solutions`)
+│   └── leetcode_solutions/
+│       ├── __init__.py         → Package metadata and helpers
+│       └── problems/           → Problem archives and resources
+│           └── 0146_LRU_Cache/ → Solution and supporting documents for problem 146
+├── docs/                       → Reserved for project-wide documentation (future use)
+├── tests/                      → Reserved for automated regression tests (future use)
+├── .github/workflows/          → Continuous integration workflows
+├── README.md                   → Project overview and getting started guide
+├── ROADMAP.md                  → Planned enhancements and audit notes
+├── CHANGELOG.md                → Release and update history
+├── pyproject.toml              → Build metadata (Python 3.9–3.13 compatible)
+├── requirements.txt            → Explicit dependency declaration
+└── LICENSE                     → MIT License terms
+```
 
-Each problem folder includes:
+## Dependency Overview
+```
+leetcode_solutions
+├── __init__.py         → Exposes package root path
+└── problems/
+    └── 0146_LRU_Cache/
+        ├── Solution.py → LRU Cache data structure implementation
+        ├── README.md   → Problem summary and quick reference
+        ├── Explanation.md → Detailed reasoning notes
+        └── *.pdf       → Original problem statement and submission proof
+```
 
-- **`solution.py`** – AI-assisted implementation, edited and verified for accuracy and performance  
-- **`explanation.md`** – Step-by-step reasoning, algorithm design, and complexity analysis  
-- **`README.md`** – Concise summary for quick browsing  
-- **`LeetCode PDFs`** – Original problem statement and accepted-submission proof  
+## Installation
+1. Create and activate a Python 3.9–3.13 virtual environment.
+2. Install the project in editable mode:
+   ```bash
+   pip install -e .
+   ```
 
-Organized by:
-- **Problem number & title**
-- **Programming language**
-- **Ontological tags** (problem type, algorithmic category, data structure)
+The project currently depends only on the Python standard library. The package metadata is provided for consistency and future growth.
 
----
+## Quick Start
+```python
+from leetcode_solutions import PACKAGE_ROOT
 
-## Methodology: Responsible AI Collaboration
+print("Solutions stored at:", PACKAGE_ROOT)
+```
+Individual problem solutions are designed for direct use in interview preparation or algorithm practice sessions. Each solution module can be run or imported independently within the `problems` directory structure.
 
-This repository applies a **human-in-the-loop** governance model for AI-assisted development:
+## Example Usage
+To experiment with the LRU Cache implementation interactively:
+```python
+from pathlib import Path
+import runpy
 
-1. **Prompting & Drafting:** AI models propose initial solutions and narrative explanations.  
-2. **Verification:** Outputs are manually reviewed, tested, and benchmarked against LeetCode cases.  
-3. **Documentation:** Reasoning is rewritten for precision, with ontology tags added for conceptual traceability.  
-4. **Governance:** Metadata and PDFs preserve proof of correctness and performance transparency.  
+solution_path = Path("src/leetcode_solutions/problems/0146_LRU_Cache/Solution.py")
+runpy.run_path(solution_path)
+```
+This snippet loads the module so that the `LRUCache` class is available in the interpreter namespace. Refer to the accompanying `Explanation.md` for algorithm details and complexity analysis.
 
-This workflow reflects a commitment to **responsible AI usage**, **explainability**, and **knowledge integrity**.
+## Troubleshooting
+- **Import Errors:** Ensure that the repository has been installed with `pip install -e .` so that the `leetcode_solutions` package is discoverable.
+- **Python Version:** Confirm that you are using Python 3.9 or later. The project metadata is validated up to Python 3.13.
+- **Missing PDFs:** The PDFs are included for provenance; if cloning with sparse-checkout, ensure binary files are fetched explicitly.
 
----
+## Support and Contributions
+Questions, corrections, and enhancements are welcome. Please open an issue or pull request describing the change along with relevant references or verification steps. When contributing new problems, include both code and documentation to maintain the repository's audit trail.
 
-## Objectives
-
-- Write **clean, readable, and optimized** solutions across diverse algorithmic domains  
-- Document **reasoning structures** and **design intent** for each solution  
-- Maintain an **auditable record of AI collaboration** through human verification  
-- Build an **ontological framework** for algorithmic understanding — connecting problems, patterns, and reasoning strategies  
-- Contribute to a **transparent, explainable culture** of AI-assisted engineering  
-
----
-
-## Ontological Taxonomy (WIP)
-
-Each solution will eventually reference one or more ontology layers:
-
-1. **Conceptual** Abstract problem category (e.g., sorting, recursion, graph traversal) |
-2. **Structural** Core data structure or pattern (e.g., tree, hash map, dynamic table) |
-3. **Procedural** Algorithmic design pattern (e.g., divide & conquer, greedy, backtracking) |
-4. **Epistemic** Type of reasoning used (e.g., inductive, deductive, heuristic) |
-
-This taxonomy evolves as the repository grows — forming a **knowledge graph of algorithmic reasoning**.
-
----
-
-## Topics Covered
-
-- Arrays & Strings  
-- Linked Lists  
-- Trees & Graphs  
-- Dynamic Programming  
-- Recursion & Backtracking  
-- Greedy Algorithms  
-- Search & Optimization  
-- Design Patterns  
-
-*(Continuously expanding and cross-linked via ontology tags.)*
-
----
-
-## Philosophy
-
-> “Automation should not replace reasoning — it should illuminate it.”
-
-This repository treats code as a **semantic artifact** — not just an executable sequence, but a **statement in an ontology of reasoning**.  
-Each problem is an opportunity to clarify how humans and machines *co-produce understanding*.
-
----
-
-## Future Roadmap
-
-- [ ] Add **multi-language solutions** (Python, JavaScript, C++)  
-- [ ] Introduce **runtime benchmarking** and **complexity graphs**  
-- [ ] Build an **ontology.json** knowledge schema for problem-type relationships  
-- [ ] Develop a **visual reasoning map** linking related algorithms  
-- [ ] Publish an **AI collaboration log** showing model contributions and human edits  
-
----
-
-## Contributing
-
-This repository is a personal experiment in **AI governance, transparency, and reasoning ontology**, but contributions and insights are welcome — especially regarding:
-
-- Ontological modeling of algorithms  
-- Alternative reasoning pathways  
-- Comparative complexity analysis  
-- Governance best practices for AI-assisted code  
-
-Feel free to open issues, discussions, or pull requests with references or examples.
+## License
+This project is released under the MIT License. See [LICENSE](LICENSE) for full terms and conditions.
