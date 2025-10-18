@@ -1,7 +1,5 @@
 # LeetCode Solutions Repository
 
-Author: Daniel Madden
-
 ## Overview
 This repository captures a curated set of LeetCode exercises with accompanying explanations and supporting artifacts. The focus is on long-term maintainability, repeatability, and transparent reasoning so that each solution can be audited, tested, and evolved without guessing about original intent.
 
