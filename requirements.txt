@@ -1,0 +1,2 @@
+# This project currently relies only on the Python standard library.
+# The pinned interpreter versions are documented in pyproject.toml (Python 3.9 - 3.13).
